@@ -10,6 +10,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .business-v2 .bv2-housing-proof{display:grid;grid-template-columns:minmax(230px,.7fr) 2fr;gap:0;margin-top:80px;border:1px solid #dce6eb;background:#fff}
+    .business-v2 .bv2-housing-proof__stat{padding:42px;border-right:1px solid #dce6eb;background:#f6fbfd}
+    .business-v2 .bv2-housing-proof__stat strong{display:block;margin:28px 0 8px;color:var(--bv-navy);font:600 clamp(60px,7vw,92px)/.9 var(--latin)}
+    .business-v2 .bv2-housing-proof__stat strong span{color:#69b9df;font-size:.42em}
+    .business-v2 .bv2-housing-proof__stat>p:not(.v2-kicker){margin:0;color:#69b9df;font:600 10px var(--latin);letter-spacing:.14em}
+    .business-v2 .bv2-housing-proof__stat small{display:block;margin-top:18px;color:#758a94;font-size:10px;line-height:1.8}
+    .business-v2 .bv2-housing-proof__relations{padding:42px}
+    .business-v2 .bv2-housing-proof__head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:26px}
+    .business-v2 .bv2-housing-proof__head>p:last-child{max-width:390px;margin:0;color:#71858f;font-size:11px;line-height:1.8}
+    .business-v2 .bv2-logo-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dce6eb;border-left:1px solid #dce6eb}
+    .business-v2 .bv2-logo-grid>div{min-height:94px;display:flex;align-items:center;justify-content:center;padding:18px;border-right:1px solid #dce6eb;border-bottom:1px solid #dce6eb;text-align:center}
+    .business-v2 .bv2-logo-grid strong{color:#526a76;font:600 15px/1.4 var(--sans)}
+    .business-v2 .bv2-logo-note{display:block;margin-top:12px;color:#98a7ae;font-size:9px;line-height:1.7}
+    @media(max-width:800px){
+      .business-v2 .bv2-housing-proof{grid-template-columns:1fr}
+      .business-v2 .bv2-housing-proof__stat{border-right:0;border-bottom:1px solid #dce6eb}
+      .business-v2 .bv2-housing-proof__head{display:block}
+      .business-v2 .bv2-housing-proof__head>p:last-child{margin-top:14px}
+    }
+    @media(max-width:560px){
+      .business-v2 .bv2-housing-proof{margin-top:55px}
+      .business-v2 .bv2-housing-proof__stat,.business-v2 .bv2-housing-proof__relations{padding:26px 22px}
+      .business-v2 .bv2-logo-grid{grid-template-columns:repeat(2,1fr)}
+      .business-v2 .bv2-logo-grid>div{min-height:78px;padding:12px}
+      .business-v2 .bv2-logo-grid strong{font-size:12px}
+    }
+  </style>
 </head>
 <body class="business-v2">
   <header class="site-header" id="siteHeader">
@@ -21,11 +50,10 @@
       <span></span><span></span>
     </button>
     <nav class="global-nav" id="globalNav">
-      <a href="about.html">ABOUT <span>私たちについて</span></a>
+      <a href="index.html#company">COMPANY <span>会社概要</span></a>
       <a href="business.html">BUSINESS <span>事業紹介</span></a>
-      <a href="index.html#trust">TRUST <span>実績・信頼</span></a>
-      <a href="index.html#recruit">RECRUIT <span>採用情報</span></a>
-      <a href="index.html#contact" class="nav-contact">CONTACT <span>お問い合わせ</span></a>
+      <a href="#recruit">RECRUIT <span>採用情報</span></a>
+      <a href="#contact" class="nav-contact">CONTACT <span>お問い合わせ</span></a>
     </nav>
   </header>
 
@@ -68,10 +96,6 @@
         <div class="bv2-feature__copy reveal">
           <h3>住宅施工を通じて培った、<br>品質と現場対応力。</h3>
           <p>住宅・集合住宅の施工を通じて、品質、安全、工程、コストに向き合ってきました。そこで蓄積された現場の知見が、建築ソリューションやSPCにもつながっています。</p>
-          <div class="bv2-metric">
-            <strong>200<small>棟以上 / 年</small></strong>
-            <p>新築住宅施工実績<br><small>※正式な数値・対象期間は公開前に要確認</small></p>
-          </div>
         </div>
       </div>
       <div class="bv2-points">
@@ -79,7 +103,32 @@
         <article class="reveal"><span>02</span><h3>現場対応</h3><p>施工現場で生じる課題を捉え、関係者と連携しながら解決へつなげます。</p></article>
         <article class="reveal"><span>03</span><h3>継続改善</h3><p>現場で得た知見を社内に蓄積し、次の施工・仕組みづくりへ反映します。</p></article>
       </div>
-    </section>
+    
+      <div class="bv2-housing-proof reveal">
+        <div class="bv2-housing-proof__stat">
+          <p class="v2-kicker">TRACK RECORD <span>施工実績</span></p>
+          <strong>200<span>+</span></strong>
+          <p>HOUSES / YEAR</p>
+          <small>シーリング工事単体で年間200棟以上<br>※対象期間・正式表記は公開前に最終確認してください。</small>
+        </div>
+
+        <div class="bv2-housing-proof__relations">
+          <div class="bv2-housing-proof__head">
+            <p class="v2-kicker">RELATIONSHIPS <span>取引・関係企業</span></p>
+            <p>住宅・建築の現場で積み重ねてきた実績と関係性を、企業ロゴで視覚的に伝えます。</p>
+          </div>
+          <div class="bv2-logo-grid">
+            <div><strong>旭化成ホームズ</strong></div>
+            <div><strong>Leopalace21</strong></div>
+            <div><strong>大林組</strong></div>
+            <div><strong>鹿島建設</strong></div>
+            <div><strong>清水建設</strong></div>
+            <div><strong>竹中工務店</strong></div>
+          </div>
+          <small class="bv2-logo-note">※企業名はレイアウト確認用です。現在の取引・関係性とロゴ掲載許可を確認後、正式なロゴ画像へ差し替えてください。</small>
+        </div>
+      </div>
+</section>
 
     <section class="bv2-bridge">
       <p class="reveal">住宅施工で得た<span>「現場を知る力」</span>を、<br>建物の価値と事業の仕組みへ。</p>
