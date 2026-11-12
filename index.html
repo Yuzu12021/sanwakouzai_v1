@@ -1,376 +1,107 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="三和工材株式会社は、住宅事業を軸に、建築ソリューションと自社システムの力で、資産価値の向上と事業効率化を支える会社です。">
-  <meta name="robots" content="index,follow">
-  <title>三和工材株式会社 | 住宅事業を軸に、建物と事業の価値を支える。</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 
-  <style>
-    /* index latest: TRUSTを独立セクションにせず、実績を事業内へ統合 */
-    .home-v2 .v2-business__metric small,
-    .home-v2 .v2-business__submetric small {
-      display:block;
-      margin-top:8px;
-      color:#81949e;
-      font-size:10px;
-      font-weight:500;
-      line-height:1.7;
-      letter-spacing:.02em;
-    }
-    .home-v2 .v2-business__submetric {
-      margin:24px 0 28px;
-      padding-top:20px;
-      border-top:1px solid #dce6eb;
-    }
-    .home-v2 .v2-business__submetric strong {
-      display:block;
-      color:var(--bv-navy);
-      font:600 clamp(34px,4vw,54px)/1 var(--latin);
-    }
-    .home-v2 .v2-business__submetric > span {
-      display:block;
-      margin-top:7px;
-      color:#67b7dc;
-      font:600 10px var(--latin);
-      letter-spacing:.14em;
-    }
-    .home-v2 .v2-business > .v2-partners {
-      margin-top:clamp(70px,9vw,130px);
-    }
-
-    .home-v2 .v2-business__clients{margin:26px 0 30px;padding-top:22px;border-top:1px solid #dce6eb}
-    .home-v2 .v2-business__clients>p{display:flex;align-items:baseline;gap:12px;margin:0 0 14px;color:var(--bv-navy);font:600 10px var(--latin);letter-spacing:.14em}
-    .home-v2 .v2-business__clients>p span{color:#81949e;font:500 10px var(--sans);letter-spacing:.06em}
-    .home-v2 .v2-business__client-list{display:flex;flex-wrap:wrap;gap:8px}
-    .home-v2 .v2-business__client-list span{padding:10px 14px;border:1px solid #dce6eb;color:#71858f;font:500 10px var(--latin);letter-spacing:.08em;background:#fff}
-    .home-v2 .v2-business__clients>small{display:block;max-width:620px;margin-top:12px;color:#91a0a8;font-size:9px;line-height:1.7}
-
-    /* COMPANY PROFILE - latest */
-    .home-v2 .v2-company__en{margin:-14px 0 26px;color:#75a9c2;font:600 10px var(--latin);letter-spacing:.16em}
-    .home-v2 .v2-company__lead{max-width:760px}
-    .home-v2 .v2-company__summary{display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 90px;border-top:1px solid #dce6eb;border-left:1px solid #dce6eb}
-    .home-v2 .v2-company__summary>div{min-height:145px;padding:28px;border-right:1px solid #dce6eb;border-bottom:1px solid #dce6eb}
-    .home-v2 .v2-company__summary strong{display:block;color:var(--bv-navy);font:600 clamp(38px,4vw,58px)/1 var(--latin)}
-    .home-v2 .v2-company__summary span{display:block;margin-top:15px;color:#7d919b;font:500 9px/1.7 var(--latin);letter-spacing:.08em}
-    .home-v2 .v2-company__info,.home-v2 .v2-company__offices,.home-v2 .v2-company__license,.home-v2 .v2-company__qualifications{padding-top:60px;margin-top:60px;border-top:1px solid #dce6eb}
-    .home-v2 .v2-company__info{display:grid;grid-template-columns:.55fr 1.45fr;gap:7vw}
-    .home-v2 .v2-company__block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:28px}
-    .home-v2 .v2-company__block-head>p:last-child{margin:0;color:#71858f;font-size:11px}
-    .home-v2 .v2-company__office-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dce6eb;border-left:1px solid #dce6eb}
-    .home-v2 .v2-company__office-grid article{padding:30px;border-right:1px solid #dce6eb;border-bottom:1px solid #dce6eb}
-    .home-v2 .v2-company__office-grid article>span{color:#69b9df;font:600 9px var(--latin);letter-spacing:.12em}
-    .home-v2 .v2-company__office-grid h3{margin:14px 0 20px;color:var(--bv-navy);font:600 22px var(--serif)}
-    .home-v2 .v2-company__office-grid p{margin:0;color:#526a76;font-size:11px;line-height:1.9}
-    .home-v2 .v2-company__office-grid .v2-company__tel{margin-top:14px;color:#81949e;font:500 9px/1.8 var(--latin);letter-spacing:.04em}
-    .home-v2 .v2-company__license-tags{display:flex;flex-wrap:wrap;gap:8px}
-    .home-v2 .v2-company__license-tags span{padding:12px 16px;border:1px solid #dce6eb;background:#f8fbfc;color:#526a76;font-size:10px}
-    .home-v2 .v2-company__qualification-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #dce6eb;border-left:1px solid #dce6eb}
-    .home-v2 .v2-company__qualification-grid>div{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:62px;padding:14px 20px;border-right:1px solid #dce6eb;border-bottom:1px solid #dce6eb}
-    .home-v2 .v2-company__qualification-grid span{color:#526a76;font-size:10px;line-height:1.55}
-    .home-v2 .v2-company__qualification-grid strong{flex:0 0 auto;color:var(--bv-navy);font:600 23px var(--latin)}
-    .home-v2 .v2-company__qualification-grid strong small{margin-left:3px;color:#81949e;font:500 9px var(--sans)}
-    @media(max-width:900px){
-      .home-v2 .v2-company__summary{grid-template-columns:1fr 1fr}
-      .home-v2 .v2-company__info{grid-template-columns:1fr;gap:28px}
-      .home-v2 .v2-company__office-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:640px){
-      .home-v2 .v2-company__summary{grid-template-columns:1fr 1fr;margin-bottom:60px}
-      .home-v2 .v2-company__summary>div{min-height:120px;padding:20px}
-      .home-v2 .v2-company__block-head{display:block}
-      .home-v2 .v2-company__block-head>p:last-child{margin-top:10px}
-      .home-v2 .v2-company__qualification-grid{grid-template-columns:1fr}
-      .home-v2 .v2-company__qualification-grid>div{min-height:58px}
-    }
-
-    /* COMPANY PROFILE / simple list */
-    .home-v2 .v2-company--simple{padding-top:120px;padding-bottom:120px}
-    .home-v2 .v2-company--simple .v2-company__head{max-width:900px;margin-bottom:58px}
-    .home-v2 .v2-company--simple .v2-company__head h2{margin-bottom:12px}
-    .home-v2 .v2-company--simple .v2-company__en{margin:0;color:#7fa7b9;font:600 10px var(--latin);letter-spacing:.16em}
-    .home-v2 .v2-company-list{max-width:1080px;margin:0}
-    .home-v2 .v2-company-list>div{display:grid;grid-template-columns:190px minmax(0,1fr);gap:42px;padding:27px 0;border-top:1px solid #dce6eb}
-    .home-v2 .v2-company-list>div:last-child{border-bottom:1px solid #dce6eb}
-    .home-v2 .v2-company-list dt{color:#4c9bc1;font-size:11px;font-weight:600;line-height:1.8;letter-spacing:.03em}
-    .home-v2 .v2-company-list dt>small{display:block;margin-top:5px;color:#93a3aa;font-size:8px;font-weight:500}
-    .home-v2 .v2-company-list dd{margin:0;color:#344e5b;font-size:12px;line-height:1.9}
-    .home-v2 .v2-company-list dd>small{color:#81949e;font:500 9px var(--latin);letter-spacing:.08em}
-    .home-v2 .v2-company-address+.v2-company-address{margin-top:22px}
-    .home-v2 .v2-company-address strong{display:block;margin-bottom:3px;color:var(--bv-navy);font-size:11px}
-    .home-v2 .v2-company-address p{margin:0}
-    .home-v2 .v2-company-lines{line-height:2!important}
-    .home-v2 .v2-company-qualifications{max-width:660px}
-    .home-v2 .v2-company-qualifications p{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:25px;margin:0;padding:7px 0;border-bottom:1px dotted #d5e0e5}
-    .home-v2 .v2-company-qualifications p:first-child{padding-top:0}
-    .home-v2 .v2-company-qualifications p:last-child{border-bottom:0;padding-bottom:0}
-    .home-v2 .v2-company-qualifications strong{text-align:right;color:var(--bv-navy);font-size:11px;font-weight:600}
-    @media(max-width:700px){
-      .home-v2 .v2-company--simple{padding-top:90px;padding-bottom:90px}
-      .home-v2 .v2-company-list>div{grid-template-columns:1fr;gap:10px;padding:23px 0}
-      .home-v2 .v2-company-list dt{font-size:10px}
-      .home-v2 .v2-company-list dd{font-size:11px}
-      .home-v2 .v2-company-address+.v2-company-address{margin-top:18px}
-      .home-v2 .v2-company-qualifications p{gap:14px}
-    }
-  </style>
-</head>
-<body class="home-v2">
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html">
-      <strong>三和工材株式会社</strong>
-      <small>SANWA KOZAI CO., LTD.</small>
-    </a>
-    <button class="menu-button" id="menuButton" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="global-nav" id="globalNav">
-      <a href="#company">COMPANY <span>会社概要</span></a>
-      <a href="business.html">BUSINESS <span>事業紹介</span></a>
-      <a href="#recruit">RECRUIT <span>採用情報</span></a>
-      <a href="#contact" class="nav-contact">CONTACT <span>お問い合わせ</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="v2-hero">
-      <div class="v2-hero__copy reveal">
-        <p class="v2-kicker">SANWA KOZAI / SINCE 1958</p>
-        <h1>住宅事業を軸に、<br><span>建物と事業の価値</span>を支える。</h1>
-        <p class="v2-hero__lead">
-          住宅施工の現場力を中心に、建築ソリューションと自社システムの専門性を組み合わせ、
-          資産価値の向上から事業効率化まで支えます。
-        </p>
-        <div class="v2-hero__actions">
-          <a class="button button--primary" href="#business">事業を見る <span>↓</span></a>
-          <a class="text-link" href="#company">会社概要を見る <span>↓</span></a>
-        </div>
-      </div>
-      <div class="v2-hero__visual reveal">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=88" alt="住宅建築のイメージ">
-        <div class="v2-hero__years">
-          <strong>68</strong>
-          <div><span>YEARS</span><small>創業から積み重ねた信頼</small></div>
-        </div>
-      </div>
-      <div class="v2-hero__scroll">SCROLL <span></span></div>
-    </section>
-
-    <section class="v2-intro">
-      <div class="v2-intro__body reveal">
-        <p class="v2-kicker"><b>01</b> OUR BUSINESS <span>三和工材の事業</span></p>
-        <h2>現場を軸に、<br>価値を高め、仕組みで支える。</h2>
-        <p>
-          三和工材の中心にあるのは、長年培ってきた住宅施工の現場力です。
-          そこに建築ソリューションとSPCの専門性を掛け合わせることで、
-          建物だけでなく、その先の資産価値と事業運営まで支えています。
-        </p>
-      </div>
-    </section>
-
-    <section class="v2-business" id="business">
-      <div class="v2-business__core reveal">
-        <div class="v2-business__image">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=86" alt="住宅施工のイメージ">
-          <span>CORE BUSINESS</span>
-        </div>
-        <div class="v2-business__copy">
-          <div class="v2-business__num">01</div>
-          <p class="v2-kicker">HOUSING BUSINESS <span>住宅事業部</span></p>
-          <h2>住宅施工を担う、<br>三和工材の中核事業。</h2>
-          <p>住宅・集合住宅の施工を通じて培ってきた技術、品質管理、現場対応力。それが、三和工材のすべての事業を支える土台です。</p>
-          <div class="v2-proof">
-            <strong><span data-count="200">0</span><small>棟以上 / 年</small></strong>
-            <p>新築住宅施工実績<br><small>※公開時に正式な対象期間・実績値をご確認ください。</small></p>
-          </div>
-          
-          <a class="v2-arrow-link" href="business.html#housing">住宅事業部を見る <span>↗</span></a>
-        </div>
-      </div>
-
-      <div class="v2-support-head reveal">
-        <span></span>
-        <p>住宅事業を起点に、2つの専門性が建物と事業の価値を支えます。</p>
-        <span></span>
-      </div>
-
-      <div class="v2-support-grid">
-        <article class="v2-support-card reveal">
-          <div class="v2-support-card__top">
-            <span class="v2-business__num">02</span>
-            <p class="v2-kicker">SOLUTION <span>建築ソリューション</span></p>
-          </div>
-          <h3>資産価値を、<br>建築から高める。</h3>
-          <p>AM領域における建築支援を通じて、品質・コスト・施工性を検証。建物の価値と事業性の両立を支えます。</p>
-          <ul>
-            <li>AM会社の建築領域支援</li>
-            <li>品質・コストの最適化</li>
-            <li>施工・修繕計画の支援</li>
-          </ul>
-          <a class="v2-arrow-link" href="business.html#solution">ソリューションを見る <span>↗</span></a>
-        </article>
-
-        <article class="v2-support-card v2-support-card--spc reveal">
-          <div class="v2-support-card__top">
-            <span class="v2-business__num">03</span>
-            <p class="v2-kicker">SPC / SYSTEM PLATFORM <span>システム・仕組み</span></p>
-          </div>
-          <h3>現場を知るから、<br>仕組みをつくれる。</h3>
-          <p>実際の業務を理解したうえで、自社に必要なシステムを自ら構築・運用・改善。事業全体の効率化を支えます。</p>
-          <ul>
-            <li>業務システム開発</li>
-            <li>社内インフラ整備</li>
-            <li>サブPM制度・業務効率化</li>
-          </ul>
-          <a class="v2-arrow-link" href="business.html#spc">SPCを見る <span>↗</span></a>
-        </article>
-      </div>
-    
-      
-    </section>
-
-    <section class="v2-company v2-company--simple" id="company">
-      <div class="v2-company__head reveal">
-        <p class="v2-kicker"><b>02</b> COMPANY PROFILE <span>会社概要</span></p>
-        <h2>三和工材株式会社</h2>
-        <p class="v2-company__en">SANWAKOUZAI CO., LTD.</p>
-      </div>
-
-      <dl class="v2-company-list reveal">
-        <div>
-          <dt>会社名</dt>
-          <dd>三和工材株式会社<br><small>SANWAKOUZAI CO., LTD.</small></dd>
-        </div>
-
-        <div>
-          <dt>グループ会社</dt>
-          <dd>有限会社 わたらい企画<br>わたらいエステート 合同会社</dd>
-        </div>
-
-        <div>
-          <dt>代表者</dt>
-          <dd>代表取締役社長　度会 亜矢子</dd>
-        </div>
-
-        <div>
-          <dt>創立</dt>
-          <dd>昭和33年7月（1958年7月）</dd>
-        </div>
-
-        <div>
-          <dt>所在地</dt>
-          <dd>
-            <div class="v2-company-address">
-              <strong>本社</strong>
-              <p>〒107-0051 東京都港区元赤坂1-5-20 601<br>
-              TEL：03-6447-0888　／　FAX：048-611-7955</p>
-            </div>
-            <div class="v2-company-address">
-              <strong>関東営業所</strong>
-              <p>〒352-0016 埼玉県新座市馬場4-7-27<br>
-              TEL：048-477-4443　／　FAX：048-611-7955</p>
-            </div>
-            <div class="v2-company-address">
-              <strong>千葉支店</strong>
-              <p>〒262-0032 千葉県千葉市花見川区幕張本郷2-4-24 201<br>
-              TEL：043-301-3491　／　FAX：048-611-7955</p>
-            </div>
-          </dd>
-        </div>
-
-        <div>
-          <dt>資本金</dt>
-          <dd>1,000万円</dd>
-        </div>
-
-        <div>
-          <dt>事業内容</dt>
-          <dd>
-            住宅事業<br>
-            建築ソリューション<br>
-            SPC
-          </dd>
-        </div>
-
-        <div>
-          <dt>建設業許可</dt>
-          <dd class="v2-company-lines">
-            埼玉県知事許可 第70453号<br>
-            (般-01) 内装仕上工事業<br>
-            (般-05) 管工事業<br>
-            (般-06) とび・土工工事業<br>
-            (般-28) 防水工事業<br>
-            (般-28) 塗装工事業
-          </dd>
-        </div>
-
-        <div>
-          <dt>従業員数</dt>
-          <dd>15名</dd>
-        </div>
-
-        <div>
-          <dt>有資格者・技術者数<small>2026年1月現在</small></dt>
-          <dd>
-            <div class="v2-company-qualifications">
-              <p><span>二級建築施工管理技士</span><strong>1名</strong></p>
-              <p><span>二級管工事施工管理技士</span><strong>2名</strong></p>
-              <p><span>シーリング管理士</span><strong>1名</strong></p>
-              <p><span>一級建築物石綿含有建材調査者</span><strong>6名</strong></p>
-              <p><span>化学物質のリスクアセスメント修了者</span><strong>1名</strong></p>
-              <p><span>職長・安全衛生責任者</span><strong>8名</strong></p>
-              <p><span>有機溶剤作業主任者</span><strong>6名</strong></p>
-              <p><span>足場の組立て等作業主任者</span><strong>8名</strong></p>
-              <p><span>石綿作業主任者</span><strong>8名</strong></p>
-              <p><span>フルハーネス特別教育者</span><strong>8名</strong></p>
-              <p><span>ゴンドラ特別教育修了者</span><strong>2名</strong></p>
-              <p><span>巻上げ機運転業務特別教育者主任者</span><strong>1名</strong></p>
-              <p><span>高所作業車技能講習修了者</span><strong>1名</strong></p>
-            </div>
-          </dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="recruit section section--paper" id="recruit">
-      <div class="recruit-copy reveal">
-        <p class="v2-kicker"><b>03</b> RECRUIT <span>採用情報</span></p>
-        <h2>現場から、<br>次の価値をつくる。</h2>
-        <p>技術と裁量を持ち、三和工材のこれからをともにつくる仲間を募集しています。</p>
-        <a class="button button--primary" href="#">採用情報を見る <span>→</span></a>
-      </div>
-      <div class="recruit-visual reveal">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=85" alt="建築の打ち合わせ">
-      </div>
-    </section>
-
-    <section class="contact-cta" id="contact">
-      <div>
-        <p class="eyebrow eyebrow--light">CONTACT <span>お問い合わせ</span></p>
-        <h2>事業・施工について、<br>お気軽にご相談ください。</h2>
-      </div>
-      <a class="button button--light" href="mailto:info@example.com">お問い合わせはこちら <span>↗</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <strong>三和工材株式会社</strong>
-      <small>SANWA KOZAI CO., LTD.</small>
-    </div>
-    <nav>
-      <a href="#company">会社概要</a>
-      <a href="business.html">事業紹介</a>
-      <a href="#recruit">採用情報</a>
-    </nav>
-    <small>© SANWA KOZAI CO., LTD.</small>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="三和工材株式会社。住宅施工の現場力を基盤に、建築ソリューションと住宅事業を展開しています。" name="description"/><title>三和工材株式会社 | 建築の価値を未来へ</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Noto+Serif+JP:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="styles.css" rel="stylesheet"/><link href="home-reference.css" rel="stylesheet"/><style>
+/* ABOUT US: centered, text-only layout (index.html only) */
+.home-reference .ref-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
+  padding: clamp(100px, 12vw, 180px) 24px;
+}
+.home-reference .ref-about__copy {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+}
+.home-reference .ref-about__copy h3 { margin: 34px auto 24px; }
+.home-reference .ref-about__copy p {
+  max-width: 780px;
+  margin-inline: auto;
+  line-height: 2.35;
+}
+.home-reference .ref-about__copy .ref-arrow {
+  margin: 36px auto 0;
+}
+@media (max-width: 800px) {
+  .home-reference .ref-about {
+    padding: 90px 24px;
+  }
+  .home-reference .ref-about__copy h3 { margin-top: 25px; }
+}
+</style><style>
+/* COMPANY: two image navigation panels (index.html only) */
+.ref-company--tiles .ref-company__heading{margin-bottom:36px}
+.ref-company--tiles .ref-company__tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ref-company--tiles .ref-company__tile{position:relative;display:block;min-height:370px;overflow:hidden;background:#16334b;color:#fff;isolation:isolate}
+.ref-company--tiles .ref-company__tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ref-company--tiles .ref-company__tile:hover img{transform:scale(1.045)}
+.ref-company--tiles .ref-company__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,22,37,.12),rgba(4,22,37,.64))}
+.ref-company--tiles .ref-company__tile-text{position:absolute;left:clamp(24px,4vw,60px);bottom:clamp(30px,4vw,60px);display:flex;flex-direction:column;gap:4px;z-index:1}
+.ref-company--tiles .ref-company__tile-text strong{font-size:clamp(26px,3vw,42px);font-weight:600;line-height:1.35}
+.ref-company--tiles .ref-company__tile-text small{font-family:var(--latin, sans-serif);font-size:15px;letter-spacing:.04em}
+.ref-company--tiles .ref-company__tile-text em{font-size:11px;font-style:normal;margin-top:12px}
+.ref-company--tiles .ref-company__tile-arrow{position:absolute;right:32px;bottom:36px;z-index:1;font-size:24px}
+.ref-company--tiles .ref-company__tile--pending{cursor:default}
+@media(max-width:700px){.ref-company--tiles .ref-company__tiles{grid-template-columns:1fr;gap:16px}.ref-company--tiles .ref-company__tile{min-height:280px}}
+</style><style id="project-carousel-style">
+/* 実績紹介専用：既存の他セクションには影響させない */
+.ref-projects .ref-projects__heading{display:flex;justify-content:space-between;align-items:end;gap:24px}
+.ref-projects .ref-projects__controls{display:flex;gap:12px;flex-shrink:0}
+.ref-projects .ref-projects__arrow{width:52px;height:52px;border:1px solid #a6bac6;border-radius:50%;background:transparent;color:#173d55;font-size:22px;cursor:pointer;transition:background .2s,color .2s}
+.ref-projects .ref-projects__arrow:hover:not(:disabled){background:#173d55;color:white}
+.ref-projects .ref-projects__arrow:disabled{opacity:.3;cursor:default}
+.ref-projects .ref-projects__track{overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ref-projects .ref-projects__track::-webkit-scrollbar{display:none}
+.ref-projects .ref-projects__items{display:flex;gap:26px;width:max-content;padding:0 max(24px,calc((100vw - 1380px)/2)) 12px}
+.ref-projects .ref-project-card{flex:0 0 clamp(265px,32vw,460px);width:clamp(265px,32vw,460px);scroll-snap-align:start;min-width:0}
+.ref-projects .ref-projects__image{overflow:hidden;aspect-ratio:1.38}
+.ref-projects .ref-projects__image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ref-projects .ref-project-card:hover img{transform:scale(1.04)}
+.ref-projects .ref-projects__hint{max-width:1380px;margin:20px auto 0;color:#6c8391;font-size:11px;letter-spacing:.06em}
+@media(max-width:700px){.ref-projects .ref-projects__heading{align-items:end}.ref-projects .ref-projects__arrow{width:40px;height:40px}.ref-projects .ref-projects__items{gap:16px;padding-inline:24px}.ref-projects .ref-project-card{flex-basis:78vw;width:78vw}}
+</style>
+<style>.ref-projects > .ref-arrow{display:flex;width:max-content;max-width:calc(100% - 48px);margin:-18px auto 34px 6%;}.ref-projects .ref-projects__items{padding-bottom:20px}.ref-company--tiles .ref-company__tile:focus-visible,.ref-projects button:focus-visible{outline:3px solid #1c86bd;outline-offset:4px}@media(max-width:700px){.ref-projects > .ref-arrow{margin:0 24px 28px}}</style></head>
+<body class="home-reference">
+<header class="site-header" id="siteHeader"><a class="brand" href="index.html"><strong>三和工材株式会社</strong><small>SANWA KOZAI CO., LTD.</small></a><button aria-controls="globalNav" aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuButton"><span></span><span></span></button><nav aria-label="メインナビゲーション" class="global-nav" id="globalNav"><a href="about.html">ABOUT US<span>私たちについて</span></a><a href="business.html">BUSINESS<span>事業案内</span></a><a href="#projects">PROJECT<span>実績紹介</span></a><a href="#news">NEWS<span>お知らせ</span></a><a href="#company">COMPANY<span>企業情報</span></a><a class="nav-contact" href="#contact">CONTACT<span>お問い合わせ</span></a></nav></header>
+<main>
+<section aria-label="メインビジュアル" class="ref-hero"><video aria-label="メイン動画（正式素材未設定）" autoplay="" class="ref-hero__video" loop="" muted="" playsinline="" poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"><source src="assets/sanwa-main.mp4" type="video/mp4"/></video><div class="ref-hero__shade"></div><div class="ref-hero__copy"><span class="ref-eyebrow">SANWA KOZAI / SINCE 1958</span><h1>建築の価値を、<br/>その先の未来へ。</h1><p>現場の力と建築の知見で、建物と社会を支える。</p></div><span class="ref-scroll">SCROLL <span></span></span></section>
+<section class="ref-section ref-news" id="news"><div class="ref-heading"><div><span class="ref-eyebrow">NEWS</span><h2>お知らせ</h2><p>三和工材からの最新情報をお届けします。</p></div><a class="ref-arrow" href="#news-list">お知らせ一覧 <span>↗</span></a></div><div class="ref-news__list" id="news-list"><p class="ref-placeholder">ブログ連携の準備中です。公開時に最新記事を自動表示します。</p></div></section>
+<section class="ref-section ref-about" id="about"><div class="ref-about__copy"><span class="ref-eyebrow">ABOUT US</span><h2>私たちについて</h2><h3>建築を統合し、<br/>建物の価値を未来へつなぐ。</h3><p>三和工材株式会社は、住宅施工で培った現場力を基盤に、建築ソリューションを通じて品質・コスト・施工性を考え、建物の価値を支えます。</p><a class="ref-arrow" href="about.html">私たちについて詳しく見る <span>↗</span></a></div></section>
+<section class="ref-section ref-business" id="business"><div class="ref-heading"><div><span class="ref-eyebrow">BUSINESS</span><h2>事業案内</h2><p>現場で培った技術と知見を、建物の価値につなげます。</p></div></div><div class="ref-business__grid"><a class="ref-business__card" href="business.html#solution"><img alt="建築ソリューションのイメージ" loading="lazy" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&amp;fit=crop&amp;w=1300&amp;q=85"/><div><span>01 / ARCHITECTURAL SOLUTION</span><h3>建築ソリューション</h3><p>建築の専門的な視点から、品質・コスト・施工計画を支援します。</p><b aria-hidden="true">↗</b></div></a><a class="ref-business__card" href="business.html#housing"><img alt="住宅事業のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1300&amp;q=85"/><div><span>02 / HOUSING BUSINESS</span><h3>住宅事業部</h3><p>住宅・集合住宅の施工を通じて、品質と現場対応力を磨いています。</p><b aria-hidden="true">↗</b></div></a></div></section>
+<section aria-label="実績紹介" class="ref-section ref-projects" id="projects">
+<div class="ref-heading ref-projects__heading"><div><span class="ref-eyebrow">PROJECT</span><h2>実績紹介</h2><p>三和工材が携わる建築・施工の取り組みをご紹介します。</p></div>
+<div class="ref-projects__controls"><button aria-label="前の実績へ" class="ref-projects__arrow" data-project-prev="" type="button">←</button><button aria-label="次の実績へ" class="ref-projects__arrow" data-project-next="" type="button">→</button></div></div><a class="ref-arrow" href="https://www.sanwakouzai.com/business">施工実績一覧を見る <span>↗</span></a>
+<div aria-label="実績一覧・横スクロール" class="ref-projects__track" id="projectTrack" tabindex="0"><div class="ref-projects__items"><article class="ref-project-card"><div class="ref-projects__image"><img alt="高層レジデンスビルのイメージ写真（仮素材）" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/></div><span>建築ソリューション / 空調更新工事</span><h3>高層レジデンスビル</h3><p>共用部の空調更新工事（写真は仮素材）</p></article><article class="ref-project-card"><div class="ref-projects__image"><img alt="元太平洋セメント習志野社宅のイメージ写真（仮素材）" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/></div><span>建築ソリューション / 大規模修繕</span><h3>元太平洋セメント習志野社宅</h3><p>大規模修繕工事（写真は仮素材）</p></article><article class="ref-project-card"><div class="ref-projects__image"><img alt="アイフラットマンションのイメージ写真（仮素材）" loading="lazy" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/></div><span>建築ソリューション / 大規模修繕</span><h3>アイフラットマンション</h3><p>外装・外構の改修工事（写真は仮素材）</p></article><article class="ref-project-card"><div class="ref-projects__image"><img alt="シーリング工事のイメージ写真（仮素材）" loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/></div><span>住宅事業部 / 施工実績</span><h3>シーリング工事</h3><p>年間200棟以上の施工実績（写真は仮素材）</p></article><article class="ref-project-card"><div class="ref-projects__image"><img alt="吉本興業 東京本社のイメージ写真（仮素材）" loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/></div><span>建築ソリューション / 屋根改修</span><h3>吉本興業 東京本社</h3><p>屋根改修工事（写真は仮素材）</p></article></div></div>
+<p class="ref-projects__hint">SCROLL <span aria-hidden="true">→</span>　左右にスクロールしてご覧いただけます</p>
+</section>
+<section class="ref-section ref-company ref-company--tiles" id="company">
+<div class="ref-heading ref-company__heading"><div><span class="ref-eyebrow">COMPANY</span><h2>企業情報</h2></div></div>
+<div class="ref-company__tiles">
+<a aria-label="会社概要を見る（現行公式サイト）" class="ref-company__tile" href="https://www.sanwakouzai.com/company">
+<img alt="" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1500&amp;q=85"/>
+<span class="ref-company__shade"></span>
+<span class="ref-company__tile-text"><strong>会社概要</strong><small>Profile</small></span>
+<span aria-hidden="true" class="ref-company__tile-arrow">↗</span>
+</a>
+<a aria-label="採用情報を見る（現行公式サイト）" class="ref-company__tile" href="https://www.sanwakouzai.com/recruit">
+<img alt="" loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=1500&amp;q=85"/>
+<span class="ref-company__shade"></span>
+<span class="ref-company__tile-text"><strong>採用情報</strong><small>Recruitment</small></span>
+<span aria-hidden="true" class="ref-company__tile-arrow">↗</span>
+</a>
+</div>
+</section>
+<section class="ref-contact" id="contact"><span class="ref-eyebrow">CONTACT</span><h2>お問い合わせ</h2><p>事業や施工についてのご相談を承ります。</p><a class="ref-arrow" href="https://www.sanwakouzai.com/contact">お問い合わせフォームへ<span>↗</span></a><small>※現在の公式お問い合わせフォームへ移動します。</small></section>
+</main><footer class="ref-footer"><div><strong>三和工材株式会社</strong><small>SANWA KOZAI CO., LTD.</small></div><nav><a href="about.html">私たちについて</a><a href="business.html">事業案内</a><a href="#projects">実績紹介</a><a href="#news">お知らせ</a><a href="#company">企業情報</a><a href="#contact">お問い合わせ</a></nav><small>© SANWA KOZAI CO., LTD.</small></footer><script src="script.js"></script><script id="project-carousel-script">
+(()=>{const track=document.getElementById('projectTrack');if(!track)return;
+const prev=document.querySelector('[data-project-prev]'),next=document.querySelector('[data-project-next]');
+const update=()=>{prev.disabled=track.scrollLeft<=2;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-2};
+const move=direction=>{const card=track.querySelector('.ref-project-card');if(!card)return;const gap=parseFloat(getComputedStyle(track.querySelector('.ref-projects__items')).gap)||0;track.scrollBy({left:direction*(card.getBoundingClientRect().width+gap),behavior:'smooth'})};
+prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));
+track.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);requestAnimationFrame(update);
+})();
+</script>
+</body></html>

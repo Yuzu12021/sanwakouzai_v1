@@ -1,0 +1,68 @@
+/* 三和工材 トップページ再構成（参考サイトの情報設計をもとに独自実装） */
+.home-reference{background:#fff;color:#14233a}
+.home-reference .site-header{background:rgba(255,255,255,.97);height:88px}
+.home-reference .site-header.is-scrolled{height:72px}
+.home-reference .global-nav{gap:clamp(12px,1.4vw,26px)}
+.home-reference .global-nav a{font-size:10px}
+.home-reference .global-nav a span{font-size:10px}
+.home-reference .nav-contact{padding:18px 15px}
+.ref-hero{height:min(850px,100svh);min-height:600px;position:relative;background:#173b56 url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85") center/cover;overflow:hidden}
+.ref-hero__video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.ref-hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,25,50,.68),rgba(0,25,50,.12))}
+.ref-hero__copy{position:absolute;top:52%;left:clamp(25px,8vw,130px);transform:translateY(-40%);color:#fff}
+.ref-hero__copy h1{font:500 clamp(42px,5.4vw,83px)/1.5 "Noto Serif JP",serif;letter-spacing:.05em;margin:22px 0}
+.ref-hero__copy p{font-size:clamp(12px,1.2vw,17px);letter-spacing:.07em}
+.ref-eyebrow{font:600 12px/1.4 Inter,sans-serif;letter-spacing:.22em;color:#4a8ba9}
+.ref-hero .ref-eyebrow{color:#d2e6ef}
+.ref-scroll{position:absolute;right:5%;bottom:35px;color:#fff;font:600 10px Inter;letter-spacing:.2em}
+.ref-scroll span{display:block;height:44px;width:1px;background:#fff;margin:12px auto 0}
+.ref-section{padding:clamp(85px,10vw,155px) clamp(24px,6vw,110px);max-width:1600px;margin:auto;scroll-margin-top:80px}
+.ref-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:50px}
+.ref-heading h2,.ref-about h2,.ref-contact h2{font:500 clamp(34px,4vw,56px)/1.4 "Noto Serif JP",serif;margin:12px 0 15px}
+.ref-heading p{font-size:14px;color:#64717b;margin:0}
+.ref-arrow{display:inline-flex;align-items:center;justify-content:space-between;gap:45px;border-bottom:1px solid #98aab5;padding:14px 0;font-size:13px;font-weight:600}
+.ref-arrow span{font-size:20px;color:#2d7eaa}
+.ref-news{display:grid;grid-template-columns:1fr 1.45fr;gap:8%}
+.ref-news .ref-heading{display:block;margin:0}
+.ref-news .ref-heading .ref-arrow{margin-top:35px}
+.ref-news__list{border-top:1px solid #cdd8df;min-height:170px}
+.ref-placeholder{padding:25px 0;color:#7a8791;font-size:13px;border-bottom:1px solid #cdd8df}
+.ref-about{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;background:#f3f7f9;max-width:none;padding-left:max(24px,calc((100vw - 1440px)/2));padding-right:max(24px,calc((100vw - 1440px)/2))}
+.ref-about__image img{height:580px;object-fit:cover}
+.ref-about__copy{max-width:570px}
+.ref-about__copy h3{font:500 clamp(24px,2.7vw,39px)/1.7 "Noto Serif JP",serif;margin:35px 0 20px}
+.ref-about__copy p{font-size:14px;color:#4e6070;line-height:2.2}
+.ref-about__copy .ref-arrow{margin-top:28px}
+.ref-business__grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ref-business__card{display:block;background:#f3f7f9;overflow:hidden}
+.ref-business__card img{height:380px;object-fit:cover;transition:transform .4s}
+.ref-business__card:hover img{transform:scale(1.03)}
+.ref-business__card>div{position:relative;padding:35px 40px 45px}
+.ref-business__card span,.ref-projects__grid article>span{font:600 11px Inter,sans-serif;color:#477d9b;letter-spacing:.08em}
+.ref-business__card h3{font:500 clamp(24px,2.5vw,36px) "Noto Serif JP",serif;margin:16px 0}
+.ref-business__card p{font-size:13px;color:#60717c;max-width:420px}
+.ref-business__card b{position:absolute;right:35px;bottom:40px;font-size:24px;color:#277aa5}
+.ref-projects{background:#f3f7f9;max-width:none}
+.ref-projects>.ref-heading,.ref-projects__grid{max-width:1380px;margin-left:auto;margin-right:auto}
+.ref-projects__grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.ref-projects__image img{height:340px;object-fit:cover}
+.ref-projects__grid article>span{display:block;margin-top:20px}
+.ref-projects__grid h3{font:500 26px "Noto Serif JP",serif;margin:12px 0}
+.ref-projects__grid p{font-size:12px;color:#788b95}
+.ref-projects__empty{background:#e4edf2;min-height:340px;padding:45px;display:flex;flex-direction:column;justify-content:center}
+.ref-company__inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10%;border-top:1px solid #ccd7df;padding-top:60px}
+.ref-company__big{font:700 clamp(65px,10vw,150px)/.95 Inter,sans-serif;color:#e3ecf1;letter-spacing:-.07em}
+.ref-company__inner h3{font:500 30px "Noto Serif JP",serif}
+.ref-company__inner p{font-size:14px;color:#60717c;max-width:500px}
+.ref-contact{padding:100px 24px;background:#0b3158;color:#fff;text-align:center}
+.ref-contact .ref-eyebrow{color:#91c6de}
+.ref-contact .ref-arrow{border-color:#91c6de;margin:20px auto;color:#fff}
+.ref-contact small{display:block;font-size:10px;color:#a9c4d5;margin-top:18px}
+.ref-footer{background:#081d32;color:#fff;padding:55px clamp(24px,6vw,110px) 30px;display:flex;justify-content:space-between;align-items:end;gap:35px;flex-wrap:wrap}
+.ref-footer strong,.ref-footer small{display:block}
+.ref-footer small{font-size:10px;color:#adc0d0;margin-top:7px}
+.ref-footer nav{display:flex;flex-wrap:wrap;gap:16px;font-size:11px}
+@media(max-width:1000px){.home-reference .site-header .global-nav{gap:9px}.home-reference .site-header .global-nav a{font-size:9px}.ref-news{grid-template-columns:1fr;gap:35px}.ref-about__image img{height:460px}}
+@media(max-width:800px){.home-reference .menu-button{display:flex;flex-direction:column;gap:6px;border:0;background:transparent;padding:12px;cursor:pointer}.home-reference .menu-button span{display:block;width:26px;height:2px;background:#14334f}.home-reference .global-nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:#fff;padding:20px 25px 35px;box-shadow:0 15px 25px #0002;flex-direction:column;align-items:stretch;gap:0!important}.home-reference .global-nav.is-open{display:flex!important}.home-reference .global-nav a{font-size:12px!important;padding:14px 0;border-bottom:1px solid #e1e8ed}.home-reference .global-nav a span{font-size:11px}.ref-about{grid-template-columns:1fr}.ref-about__image img{height:350px}.ref-business__grid,.ref-projects__grid,.ref-company__inner{grid-template-columns:1fr}.ref-business__card img{height:300px}.ref-company__big{font-size:90px}.ref-hero{min-height:580px;height:85svh}.ref-hero__copy h1{font-size:clamp(34px,7vw,58px)}}
+@media(max-width:520px){.ref-section{padding:75px 22px}.ref-heading{display:block}.ref-heading .ref-arrow{margin-top:15px}.ref-hero__copy{left:24px;right:20px}.ref-hero__copy h1{font-size:36px}.ref-business__card>div{padding:26px}.ref-business__card b{right:25px;bottom:25px}.ref-projects__empty{min-height:240px}.ref-footer{display:block}.ref-footer nav{margin:30px 0}}
+@media(prefers-reduced-motion:reduce){.ref-business__card img{transition:none}}
