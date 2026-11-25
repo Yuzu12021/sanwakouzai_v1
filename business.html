@@ -1,215 +1,73 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="三和工材株式会社の事業紹介。住宅事業を軸に、建築ソリューションとSPCによって、資産価値の向上と事業効率化を支えます。">
-  <meta name="robots" content="index,follow">
-  <title>事業紹介 | 三和工材株式会社</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 
-  <style>
-    .business-v2 .bv2-housing-proof{display:grid;grid-template-columns:minmax(230px,.7fr) 2fr;gap:0;margin-top:80px;border:1px solid #dce6eb;background:#fff}
-    .business-v2 .bv2-housing-proof__stat{padding:42px;border-right:1px solid #dce6eb;background:#f6fbfd}
-    .business-v2 .bv2-housing-proof__stat strong{display:block;margin:28px 0 8px;color:var(--bv-navy);font:600 clamp(60px,7vw,92px)/.9 var(--latin)}
-    .business-v2 .bv2-housing-proof__stat strong span{color:#69b9df;font-size:.42em}
-    .business-v2 .bv2-housing-proof__stat>p:not(.v2-kicker){margin:0;color:#69b9df;font:600 10px var(--latin);letter-spacing:.14em}
-    .business-v2 .bv2-housing-proof__stat small{display:block;margin-top:18px;color:#758a94;font-size:10px;line-height:1.8}
-    .business-v2 .bv2-housing-proof__relations{padding:42px}
-    .business-v2 .bv2-housing-proof__head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:26px}
-    .business-v2 .bv2-housing-proof__head>p:last-child{max-width:390px;margin:0;color:#71858f;font-size:11px;line-height:1.8}
-    .business-v2 .bv2-logo-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dce6eb;border-left:1px solid #dce6eb}
-    .business-v2 .bv2-logo-grid>div{min-height:94px;display:flex;align-items:center;justify-content:center;padding:18px;border-right:1px solid #dce6eb;border-bottom:1px solid #dce6eb;text-align:center}
-    .business-v2 .bv2-logo-grid strong{color:#526a76;font:600 15px/1.4 var(--sans)}
-    .business-v2 .bv2-logo-note{display:block;margin-top:12px;color:#98a7ae;font-size:9px;line-height:1.7}
-    @media(max-width:800px){
-      .business-v2 .bv2-housing-proof{grid-template-columns:1fr}
-      .business-v2 .bv2-housing-proof__stat{border-right:0;border-bottom:1px solid #dce6eb}
-      .business-v2 .bv2-housing-proof__head{display:block}
-      .business-v2 .bv2-housing-proof__head>p:last-child{margin-top:14px}
-    }
-    @media(max-width:560px){
-      .business-v2 .bv2-housing-proof{margin-top:55px}
-      .business-v2 .bv2-housing-proof__stat,.business-v2 .bv2-housing-proof__relations{padding:26px 22px}
-      .business-v2 .bv2-logo-grid{grid-template-columns:repeat(2,1fr)}
-      .business-v2 .bv2-logo-grid>div{min-height:78px;padding:12px}
-      .business-v2 .bv2-logo-grid strong{font-size:12px}
-    }
-  </style>
-</head>
-<body class="business-v2">
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html">
-      <strong>三和工材株式会社</strong>
-      <small>SANWA KOZAI CO., LTD.</small>
-    </a>
-    <button class="menu-button" id="menuButton" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="global-nav" id="globalNav">
-      <a href="index.html#company">COMPANY <span>会社概要</span></a>
-      <a href="business.html">BUSINESS <span>事業紹介</span></a>
-      <a href="#recruit">RECRUIT <span>採用情報</span></a>
-      <a href="#contact" class="nav-contact">CONTACT <span>お問い合わせ</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="bv2-hero">
-      <div class="bv2-hero__copy reveal">
-        <p class="v2-kicker">BUSINESS <span>事業紹介</span></p>
-        <h1>住宅を軸に、<br><em>価値と仕組み</em>をつくる。</h1>
-        <p>三和工材は、住宅施工の現場で培った知見を起点に、建築ソリューションと自社システムの専門性を組み合わせ、建物と事業の両面を支えています。</p>
-      </div>
-      <div class="bv2-hero__diagram reveal" aria-label="三和工材の事業構造">
-        <div class="bv2-core">
-          <small>CORE BUSINESS</small>
-          <strong>住宅事業</strong>
-          <span>施工・現場</span>
-        </div>
-        <div class="bv2-flow"><span></span><p>現場の知見を<br>2つの専門性へ</p><span></span></div>
-        <div class="bv2-supports">
-          <div><small>SOLUTION</small><strong>資産価値向上</strong><span>建築支援</span></div>
-          <div><small>SPC</small><strong>事業効率化</strong><span>システム・仕組み</span></div>
-        </div>
-      </div>
-    </section>
-
-    <nav class="bv2-tabs" aria-label="事業内ナビゲーション">
-      <a href="#housing"><span>01</span><strong>住宅事業</strong><small>HOUSING</small></a>
-      <a href="#solution"><span>02</span><strong>建築ソリューション</strong><small>SOLUTION</small></a>
-      <a href="#spc"><span>03</span><strong>SPC</strong><small>SYSTEM PLATFORM</small></a>
-    </nav>
-
-    <section class="bv2-division bv2-division--housing" id="housing">
-      <div class="bv2-division__head reveal">
-        <p class="v2-kicker"><b>01</b> HOUSING BUSINESS <span>住宅事業部</span></p>
-        <h2>現場を担う。<br>それが、すべての起点。</h2>
-      </div>
-      <div class="bv2-feature">
-        <div class="bv2-feature__image reveal">
-          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=88" alt="住宅施工のイメージ">
-        </div>
-        <div class="bv2-feature__copy reveal">
-          <h3>住宅施工を通じて培った、<br>品質と現場対応力。</h3>
-          <p>住宅・集合住宅の施工を通じて、品質、安全、工程、コストに向き合ってきました。そこで蓄積された現場の知見が、建築ソリューションやSPCにもつながっています。</p>
-        </div>
-      </div>
-      <div class="bv2-points">
-        <article class="reveal"><span>01</span><h3>施工品質</h3><p>長年の経験と現場管理をもとに、安定した施工品質を追求します。</p></article>
-        <article class="reveal"><span>02</span><h3>現場対応</h3><p>施工現場で生じる課題を捉え、関係者と連携しながら解決へつなげます。</p></article>
-        <article class="reveal"><span>03</span><h3>継続改善</h3><p>現場で得た知見を社内に蓄積し、次の施工・仕組みづくりへ反映します。</p></article>
-      </div>
-    
-      <div class="bv2-housing-proof reveal">
-        <div class="bv2-housing-proof__stat">
-          <p class="v2-kicker">TRACK RECORD <span>施工実績</span></p>
-          <strong>200<span>+</span></strong>
-          <p>HOUSES / YEAR</p>
-          <small>シーリング工事単体で年間200棟以上<br>※対象期間・正式表記は公開前に最終確認してください。</small>
-        </div>
-
-        <div class="bv2-housing-proof__relations">
-          <div class="bv2-housing-proof__head">
-            <p class="v2-kicker">RELATIONSHIPS <span>取引・関係企業</span></p>
-            <p>住宅・建築の現場で積み重ねてきた実績と関係性を、企業ロゴで視覚的に伝えます。</p>
-          </div>
-          <div class="bv2-logo-grid">
-            <div><strong>旭化成ホームズ</strong></div>
-            <div><strong>Leopalace21</strong></div>
-            <div><strong>大林組</strong></div>
-            <div><strong>鹿島建設</strong></div>
-            <div><strong>清水建設</strong></div>
-            <div><strong>竹中工務店</strong></div>
-          </div>
-          <small class="bv2-logo-note">※企業名はレイアウト確認用です。現在の取引・関係性とロゴ掲載許可を確認後、正式なロゴ画像へ差し替えてください。</small>
-        </div>
-      </div>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="三和工材株式会社の事業案内。建築ソリューション事業部と住宅事業部をご紹介します。" name="description"/>
+<title>事業案内 | 三和工材株式会社</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Noto+Serif+JP:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#17446e;--ink:#20384f;--muted:#687784;--line:#e0edf3;--bg:#f8fbfc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:1.9}a{color:inherit;text-decoration:none}img{display:block;width:100%;object-fit:cover}button{font:inherit}
+.hero{background:#f2f7fa;padding:110px max(6vw,24px) 95px;position:relative;overflow:hidden}.hero:after{content:"BUSINESS";position:absolute;right:4%;bottom:-70px;font-size:clamp(100px,17vw,250px);font-weight:700;color:#e1edf4;line-height:1;pointer-events:none}.hero-inner{max-width:1180px;margin:auto;position:relative;z-index:1}.eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:#317baa}.hero h1{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(46px,6vw,76px);margin:8px 0 24px}.hero p{max-width:650px;margin:0;font-size:15px}.crumb{max-width:1180px;margin:0 auto;padding:20px 24px;color:var(--muted);font-size:11px}
+.anchor{display:grid;grid-template-columns:1fr 1fr;max-width:1180px;margin:38px auto 0;border:1px solid var(--line)}.anchor a{padding:30px 36px;display:flex;justify-content:space-between;align-items:center;font-weight:700}.anchor a+a{border-left:1px solid var(--line)}.anchor span{color:#317baa;font-size:20px}
+.section{padding:110px max(5vw,24px)}.section:nth-of-type(even){background:#f8fbfc}.container{max-width:1180px;margin:auto}.section-title{border-left:5px solid #93cded;padding-left:24px;margin-bottom:40px}.section-title small{font-size:12px;color:#317baa;letter-spacing:.15em;font-weight:700}.section-title h2{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(34px,4.4vw,56px);line-height:1.45;margin:8px 0}
+.lead{font-family:"Noto Serif JP",serif;font-size:clamp(21px,2.7vw,31px);line-height:1.65;margin:0 0 22px}.intro{max-width:880px;font-size:15px;color:#2d719d;margin-bottom:48px}
+.visual{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;margin-bottom:90px}.visual img{height:380px}.visual-copy{padding:20px 0}.visual-copy strong{font-family:"Noto Serif JP",serif;font-size:25px;font-weight:500}.visual-copy p{font-size:14px;color:#3077a4}
+.block-head{display:flex;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:28px}.block-head h3{font-family:"Noto Serif JP",serif;font-size:30px;font-weight:500;margin:0}.block-head span{color:#77b5d8;font-size:11px;letter-spacing:.16em;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{border:1px solid var(--line);background:white;padding:28px 22px;min-height:190px}.feature .num{color:#81bcdd;font-size:12px;font-weight:700}.feature h4{margin:20px 0 10px;font-size:17px;color:var(--navy)}.feature p{font-size:12px;color:#317baa;margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service{border:1px solid var(--line);background:#fff;overflow:hidden}.service img{height:200px}.service div{padding:22px}.service h4{margin:0 0 10px;font-size:18px}.service p{margin:0;font-size:12px;color:#317baa}
+.note{font-size:11px;color:#7b8993;margin-top:20px}
+footer{background:#0f2b45;color:#fff;padding:55px max(5vw,24px)}footer .container{display:flex;justify-content:space-between;gap:25px;align-items:center}footer nav{display:flex;flex-wrap:wrap;gap:20px;font-size:11px}
+@media(max-width:900px){.visual{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hero{padding:75px 24px}.anchor{margin:25px 20px 0}.anchor a{padding:18px 12px;font-size:12px}.section{padding:75px 24px}.visual img{height:250px}.grid,.service-grid{grid-template-columns:1fr}footer .container{flex-direction:column;align-items:flex-start}}
+</style><link href="styles.css" rel="stylesheet"/></head><body class="business-subpage">
+<header class="site-header" id="siteHeader"><a class="brand" href="index.html"><strong>三和工材株式会社</strong><small>SANWA KOZAI CO., LTD.</small></a><button aria-controls="globalNav" aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuButton"><span></span><span></span></button><nav aria-label="メインナビゲーション" class="global-nav" id="globalNav"><a href="about.html">ABOUT US<span>私たちについて</span></a><a aria-current="page" href="business.html">BUSINESS<span>事業案内</span></a><a href="index.html#projects">PROJECT<span>実績紹介</span></a><a href="index.html#news">NEWS<span>お知らせ</span></a><a href="index.html#company">COMPANY<span>企業情報</span></a><a class="nav-contact" href="index.html#contact">CONTACT<span>お問い合わせ</span></a></nav></header>
+<main>
+<section class="hero business-page-hero">
+<div class="hero-inner">
+<div class="business-page-heading">
+<div class="business-page-title">
+<span class="eyebrow">BUSINESS</span>
+<h1>事業案内</h1>
+</div>
+<nav aria-label="事業一覧" class="anchor business-page-nav">
+<a href="#solution">
+          建築ソリューション
+          <span>▼</span>
+</a>
+<a href="#housing">
+          住宅事業部
+          <span>▼</span>
+</a>
+</nav>
+</div>
+<div class="crumb business-page-crumb">
+<a href="index.html">TOP</a>
+<span>›</span>
+      事業案内
+    </div>
+</div>
 </section>
-
-    <section class="bv2-bridge">
-      <p class="reveal">住宅施工で得た<span>「現場を知る力」</span>を、<br>建物の価値と事業の仕組みへ。</p>
-    </section>
-
-    <section class="bv2-division bv2-division--solution" id="solution">
-      <div class="bv2-division__head reveal">
-        <p class="v2-kicker"><b>02</b> ARCHITECTURAL SOLUTION <span>建築ソリューション</span></p>
-        <h2>建築の視点から、<br>資産価値を高める。</h2>
-      </div>
-      <div class="bv2-split">
-        <div class="bv2-split__copy reveal">
-          <p class="bv2-lead">AM領域における建築面のパートナーとして、現場で培った知見を活かし、品質・コスト・施工性を多角的に検証します。</p>
-          <div class="bv2-service-list">
-            <div><span>01</span><strong>建築領域支援</strong><p>建物・施工に関する専門的な視点から、AM業務を支援。</p></div>
-            <div><span>02</span><strong>品質・コスト最適化</strong><p>品質を維持しながら、計画や工事内容を精査し最適化。</p></div>
-            <div><span>03</span><strong>修繕・施工計画</strong><p>建物の状態と将来性を踏まえ、適切な工事計画を支援。</p></div>
-          </div>
-        </div>
-        <div class="bv2-split__visual reveal">
-          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=88" alt="建築物のイメージ">
-          <div><small>SOLUTION</small><strong>BUILDING VALUE</strong><span>建物の価値を、長期的な視点で考える。</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bv2-division bv2-division--spc" id="spc">
-      <div class="bv2-division__head reveal">
-        <p class="v2-kicker"><b>03</b> SPC / SYSTEM PLATFORM <span>システム・仕組み</span></p>
-        <h2>現場を知るから、<br>仕組みをつくれる。</h2>
-      </div>
-
-      <div class="bv2-spc-intro">
-        <div class="bv2-spc-intro__copy reveal">
-          <p class="bv2-lead">外部のシステム会社へ丸投げするのではなく、実際の業務を理解する自社のメンバーが、必要な仕組みを考え、構築し、運用・改善していく。</p>
-          <p>現場と管理部門の双方を理解しているからこそ、業務に合ったシステムをつくることができます。SPCは、単なるバックオフィスではなく、三和工材の事業効率を内側から支える基盤です。</p>
-        </div>
-        <div class="bv2-spc-cycle reveal">
-          <div><span>01</span><strong>UNDERSTAND</strong><small>業務を理解する</small></div>
-          <i>→</i>
-          <div><span>02</span><strong>BUILD</strong><small>自社で構築する</small></div>
-          <i>→</i>
-          <div><span>03</span><strong>IMPROVE</strong><small>運用・改善する</small></div>
-        </div>
-      </div>
-
-      <div class="bv2-spc-grid">
-        <article class="reveal"><span>01</span><h3>業務システム開発</h3><p>現場・管理業務の課題を整理し、実務に沿った社内システムを設計・構築。</p></article>
-        <article class="reveal"><span>02</span><h3>社内インフラ整備</h3><p>情報共有や業務遂行を支える環境を整え、組織全体の生産性向上へ。</p></article>
-        <article class="reveal"><span>03</span><h3>サブPM制度</h3><p>業務を横断して把握し、プロジェクト進行を仕組みの面から支援。</p></article>
-        <article class="reveal"><span>04</span><h3>業務効率化</h3><p>運用後も改善を重ね、手作業や重複業務を減らして本来の業務へ集中できる環境をつくります。</p></article>
-      </div>
-    </section>
-
-    <section class="bv2-summary">
-      <p class="v2-kicker reveal">SANWA KOZAI'S STRENGTH <span>三和工材の強み</span></p>
-      <h2 class="reveal">施工する。価値を高める。仕組みをつくる。</h2>
-      <div class="bv2-summary__flow reveal">
-        <div><small>HOUSING</small><strong>住宅事業</strong><span>現場・施工</span></div>
-        <i>＋</i>
-        <div><small>SOLUTION</small><strong>資産価値向上</strong><span>建築支援</span></div>
-        <i>＋</i>
-        <div><small>SPC</small><strong>事業効率化</strong><span>自社システム</span></div>
-      </div>
-      <p class="bv2-summary__message reveal">3つの専門性を別々に持つのではなく、<br>現場で得た知見をつなぎ、建物と事業の価値へ変えていく。<br>それが三和工材の事業です。</p>
-    </section>
-
-    <section class="contact-cta" id="contact">
-      <div>
-        <p class="eyebrow eyebrow--light">CONTACT <span>お問い合わせ</span></p>
-        <h2>事業・施工について、<br>お気軽にご相談ください。</h2>
-      </div>
-      <a class="button button--light" href="mailto:info@example.com">お問い合わせはこちら <span>↗</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand"><strong>三和工材株式会社</strong><small>SANWA KOZAI CO., LTD.</small></div>
-    <nav><a href="about.html">私たちについて</a><a href="business.html">事業紹介</a><a href="index.html#trust">実績・信頼</a><a href="index.html#recruit">採用情報</a></nav>
-    <small>© SANWA KOZAI CO., LTD.</small>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<section class="section" id="solution"><div class="business-section-image"><img alt="高層建築のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/></div><div class="container">
+<div class="section-title"><small>ARCHITECTURAL SOLUTION</small><h2>建築ソリューション</h2></div>
+<p class="lead">建築という手段で、<br/>お客様の課題を解決する。</p>
+<p class="intro">投資家様・オーナー様・管理会社様が保有する建物に対し、建築の専門的な視点から課題を整理し、品質改善やコストの適正化、建物保守を支援します。</p>
+<div class="block-head"><h3>お客様への提供価値</h3><span>MERIT</span></div>
+<div class="grid"><article class="feature"><span class="num">01</span><h4>品質改善</h4><p>建物の状態や工事内容を精査し、品質向上を支援。</p></article><article class="feature"><span class="num">02</span><h4>コスト適正化</h4><p>必要な品質を確保しながら、建築費用を検討。</p></article><article class="feature"><span class="num">03</span><h4>管理業務支援</h4><p>管理会社様の建築関連業務を専門的な視点から補助。</p></article><article class="feature"><span class="num">04</span><h4>セカンドオピニオン</h4><p>物件保守や工事計画に対する第三者的な助言。</p></article></div>
+<div style="height:75px"></div><div class="block-head"><h3>主なサービス</h3><span>SERVICE</span></div>
+<div class="service-grid"><article class="service"><img alt="建築物のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>建築領域の支援</h4><p>建物・施工に関する技術的な検討と提案。</p></div></article><article class="service"><img alt="施工現場のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>改修・修繕計画</h4><p>建物の状態に応じた工事内容や施工計画の検討。</p></div></article><article class="service"><img alt="建物管理のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>品質・コストの検証</h4><p>品質と投資効率の両面から工事内容を確認。</p></div></article></div>
+</div></section>
+<section class="section" id="housing"><div class="business-section-image"><img alt="住宅のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/></div><div class="container">
+<div class="section-title"><small>HOUSING BUSINESS</small><h2>住宅事業部</h2></div>
+<p class="lead">暮らしの土台を、<br/>確かな技術で。</p>
+<p class="intro">新築戸建住宅・共同住宅の外装工事から、住宅の内外装リフォームまで。現場で培った施工技術を活かし、安全で快適な住環境づくりを支えます。</p>
+<div class="block-head"><h3>主な工事内容</h3><span>SERVICE</span></div>
+<div class="grid"><article class="feature"><span class="num">01</span><h4>新築戸建住宅</h4><p>新築戸建住宅の外装工事。</p></article><article class="feature"><span class="num">02</span><h4>新築共同住宅</h4><p>集合住宅の外装工事。</p></article><article class="feature"><span class="num">03</span><h4>戸建リフォーム</h4><p>戸建住宅の内装・外装リフォーム。</p></article><article class="feature"><span class="num">04</span><h4>共同住宅リフォーム</h4><p>共同住宅の内装・外装リフォーム。</p></article></div>
+<div style="height:75px"></div><div class="block-head"><h3>施工分野</h3><span>WORKS</span></div>
+<div class="service-grid"><article class="service"><img alt="住宅外観のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>防水工事</h4><p>ウレタン・シート・長尺防水など。</p></div></article><article class="service"><img alt="住宅施工のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>シーリング工事</h4><p>新築住宅を中心としたシーリング施工。</p></div></article><article class="service"><img alt="住宅内装のイメージ" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/><div><h4>塗装・リフォーム工事</h4><p>外壁・屋根塗装、内外装の改修工事。</p></div></article></div>
+<p class="note">※写真はレイアウト確認用の仮素材です。正式公開時に三和工材の施工写真へ差し替えてください。</p>
+</div></section>
+<section class="contact"><div class="container"><div><div class="eyebrow">CONTACT</div><h2>事業・施工に関するご相談は<br/>こちらから。</h2></div><a href="https://www.sanwakouzai.com/contact">お問い合わせはこちら　↗</a></div></section>
+</main><footer><div class="container"><div><strong>三和工材株式会社</strong><br/><small>SANWA KOZAI CO., LTD.</small></div><nav><a href="index.html">トップ</a><a href="about.html">私たちについて</a><a href="business.html">事業案内</a><a href="index.html#projects">実績紹介</a><a href="https://www.sanwakouzai.com/contact">お問い合わせ</a></nav></div></footer>
+<script>(()=>{const button=document.getElementById("menuButton"),nav=document.getElementById("globalNav"),header=document.getElementById("siteHeader");if(!button||!nav)return;button.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");button.setAttribute("aria-expanded",String(open));button.setAttribute("aria-label",open?"メニューを閉じる":"メニューを開く")});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("is-open");button.setAttribute("aria-expanded","false")}));const onScroll=()=>header.classList.toggle("is-scrolled",window.scrollY>40);window.addEventListener("scroll",onScroll,{passive:true});onScroll()})();</script>
+</body></html>
